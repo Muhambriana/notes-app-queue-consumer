@@ -3,11 +3,11 @@ import nodemailer from 'nodemailer';
 class MailSender {
   constructor() {
     this._transporter = nodemailer.createTransport({
-      host: process.env.SMPTP_HOST,
+      host: process.env.SMTP_HOST,
       port: process.env.SMTP_PORT,
       auth: {
-        user: process.env.SMPTP_USER,
-        pass: process.env.SMPTP_PASSWORD,
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
       },
     });
   }
