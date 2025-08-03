@@ -30,4 +30,5 @@ class MailSender {
   }
 }
 
-module.exports = MailSender;
+export default MailSender;
+

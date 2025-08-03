@@ -1,9 +1,10 @@
+import dotenv from 'dotenv';
 import amqp from 'amqplib';
 import NotesService from './NotesService.js';
 import MailSender from './MailSender.js';
-import Listener from './Listener.js';
+import Listener from './listener.js';
 
-require('dotenv').config();
+dotenv.config();
 
 const init = async () => {
   const notesService = new NotesService();
